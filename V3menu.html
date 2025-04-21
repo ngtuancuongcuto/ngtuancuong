@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu Config V3 NTC</title>
+  <style>
+    body {
+      margin: 0;
+      background-image: url('https://cdn.mobilecity.vn/mobilecity-vn/images/2023/05/hinh-nen-4k-iphone-2.jpg.webp');
+      background-size: cover;
+      background-position: center;
+      font-family: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: white;
+    }
+
+    .menu {
+      background-color: rgba(255, 255, 255, 0.03);
+      padding: 80px 70px;
+      border-radius: 20px;
+      text-align: center;
+      width: 600px;
+      border: 4px solid #00ffff;
+      box-shadow: 0 0 30px #00ffff;
+    }
+
+    .avatar {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      border: 5px solid #00ffff;
+      box-shadow: 0 0 20px #00ffff;
+      margin: 0 auto 20px;
+      background-image: url('https://i.postimg.cc/cJBcZpJ0/ED5-F4-C0-C-E735-4763-9-C47-0-C2390161-F57.jpg'); /* Thay đường dẫn ảnh tại đây */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .menu h2 {
+      margin-bottom: 35px;
+      font-size: 35px;
+      font-weight: bold;
+    }
+
+    .menu button {
+      display: block;
+      width: 100%;
+      margin: 24px 0;
+      padding: 24px;
+      background-color: transparent;
+      border: 3px solid #00ffff;
+      border-radius: 22px;
+      color: white;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 12px #00ffff;
+      font-family: inherit;
+    }
+
+    .menu button.clicked {
+      background-color: #00ffff;
+      color: black;
+      border-color: #00ffff;
+      box-shadow: 0 0 20px #00ffff;
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-size: 35px;
+      opacity: 0.85;
+      font-weight: bold;
+    }
+
+    .footer::before, .footer::after {
+      content: '✅❗';
+      margin: 0 5px;
+    }
+  </style>
+  <script>
+    function kichHoat(btn, chucNang) {
+      alert("Đã kích hoạt " + chucNang + " : @ngtuancuongios ( lưu ý : BẬT XONG TẤT CẢ MENU rồi thì khởi động lại máy rồi ngâm 15 phút rồi trải nghiệm nhé !)");
+      btn.classList.add("clicked");
+
+      const buttons = document.querySelectorAll("button");
+      const allClicked = Array.from(buttons).every(b => b.classList.contains("clicked"));
+      if (allClicked) {
+        buttons.forEach(b => b.style.boxShadow = "0 0 20px #00ffff");
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="menu">
+    <div class="avatar"></div> 
+    <h2>Menu Config V3 NTC 🇻🇳<br>@ngtuancuongios</h2>
+    <button onclick="kichHoat(this, 'Fix Lag - Rung IOS 25% ✅')">Fix Lag - Rung IOS 25%</button>
+    <button onclick="kichHoat(this, 'Speed Root SuperAim ✅')">Speed Root SuperAim</button>
+    <button onclick="kichHoat(this, 'Vibration Pointer✅')">Vibration Pointer</button>
+    <button onclick="kichHoat(this, 'Aimbot Secure head✅')">Aimbot Secure head</button>
+    <button onclick="kichHoat(this, 'Lock Setup MaxDpi✅')">Lock Setup MaxDpi</button>
+    <button onclick="kichHoat(this, 'ANTIBAND ACC✅')">ANTIBAND ACC</button>
+    <div class="footer">menu hỗ trợ kéo tâm IOS
+nhu cầu múc config liên hệ tiểu sử kênh Tiktok NTC nhá 🫶</div>
+  </div>
+</body>
+</html>
